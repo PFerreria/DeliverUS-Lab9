@@ -12,4 +12,12 @@ function create (data) {
   return post('/products/', data)
 }
 
-export { getDetail, getProductCategories, create }
+function update (id, data) {
+  return post(`/products/${id}`, data)
+}
+
+function remove (id) {
+  return post(`/products/${id}/delete`)
+}
+
+export { getDetail, getProductCategories, create, update, remove }
